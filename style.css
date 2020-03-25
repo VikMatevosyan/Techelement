@@ -1,0 +1,183 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.left {
+    padding: 20px 93px;
+}
+
+.catalog-name {
+    display: none;
+}
+
+.left:hover .catalog-name {
+    display: block;
+}
+
+.catalog-name:hover {
+    cursor: pointer;
+}
+
+.menu {
+    padding-left: 20px;
+    line-height: 25px;
+    /*display: none;*/
+}
+
+.first-stage {
+    position: relative;
+}
+
+.second-stage {
+    position: absolute;
+    left: 100px;
+    top: 5px;
+    display: none;
+}
+
+.third-stage {
+    position: absolute;
+    left: 50px;
+    top: 20px;
+    width: 70px;
+    display: none;
+}
+
+.fourth-stage {
+    position: absolute;
+    left: 45px;
+    top: 20px;
+    width: 110px;
+    display: none;
+}
+
+.first-stage:hover .second-stage {
+    display: block;
+    cursor: pointer;
+}
+
+.second-stage:hover .third-stage {
+    display: block;
+    cursor: pointer;
+}
+
+.third-stage:hover .fourth-stage {
+    display: block;
+    cursor: pointer;
+}
+
+.catalog-name:hover .menu {
+    display: block;
+}
+
+.menu li:hover {
+    cursor: pointer;
+}
+
+
+.catalog {
+    margin-top: 25px;
+    width: 90%;
+}
+
+.img {
+    width: 80%;
+}
+
+.img img {
+    width: 100%;
+}
+
+.cat {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cat li {
+    width: 22%;
+    border: 2px solid #dedede;
+    background: #fff;
+    /*min-width: 250px;*/
+    display: block;
+    overflow: hidden;
+    margin: 0 0 30px 28px;
+}
+
+.number {
+    padding: 10px;
+    color: gray;
+}
+
+.nam {
+    padding: 8px 0;
+    color: blue;
+    font-size: 20px;
+    width: 85%;
+    position: relative;
+}
+
+.desc {
+    padding: 5px 0px;
+    color: black;
+    width: 83%;
+}
+
+.price {
+    padding: 70px 5px 5px 5px;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    color: black;
+}
+
+.but {
+    width: 70%;
+    margin: 0 auto;
+    padding: 20px 0px;
+}
+
+.btn {
+    color: red;
+    font-size: 15px;
+    border: 1px solid red;
+    padding: 7px 37px;
+    background: white;
+    text-align: center;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.prices {
+    display: flex;
+    padding-top: 70px;
+    padding-left: 15px;
+}
+
+.rub {
+    font-weight: bold;
+    font-size: 18px;
+    color: black;
+}
+
+.btn-cart {
+    color: red;
+    font-size: 15px;
+    border: 1px solid red;
+    padding: 5px 20px;
+    background: white;
+    text-align: center;
+}
+
+.name-change {
+    position: absolute;
+    left: 0;
+    padding: 5px 25px;
+    /*display: none;*/
+}
