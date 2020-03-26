@@ -21,18 +21,46 @@ function isBalanced(str) {
     }
     return !st.length;
 }
+
 // Написать функцию, проверяющую валидность работы первой функции. Функция принимает на вход строку из задачи выше
 // и возвращает true || false. (есть ошибки вложенности или нет)
 
-var name = document.querySelectorAll('.name');
-var namechange = document.querySelectorAll('.name-change');
-namechange.value = name.innerText;
-name.addEventListener('click', names);
-function names(e) {
-    name.currentTarget.style.display = 'none';
-    document.querySelector('.name-change').style.display = 'block';
+// Добавить возможность изменить название товара. При клике на название, появляется поле редактирования,
+//     после всех изменений и нажатии кнопки «Готов», данные о новых именах товаров отправляются на сервер
+
+const cat = document.querySelector('.catalog-name');
+const menu = document.querySelector('.menu');
+cat.addEventListener('click', catalog);
+function catalog () {
+   menu.classList.toggle('block');
 }
 
+$(document).ready(function () {
+    $(".name").click(function () {
+        const currentText = $(this);
+        let text = currentText.text();
+        let inp = currentText.closest(".nam").find(".name-change");
+        let btn = $('.ready-btn');
+        inp.val(text);
+        currentText.addClass('none');
+        inp.addClass('block');
+        btn.addClass('block');
+    });
+    $(".name-change").blur(function () {
+        const currentText = $(this);
+        let inp = currentText.closest(".nam").find(".name-change");
+        currentText.text =  inp.val();
+        inp.toggleClass('none');
+        currentText.toggleClass('block');
+    })
+});
+
+
+
+// $( function() {
+//     $( ".cat" ).sortable();
+//     $( ".cat" ).disableSelection();
+// } );
 
 
 
