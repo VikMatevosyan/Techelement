@@ -21,6 +21,8 @@ $(document).ready(function () {
         const currentText = $(this);
         let text = currentText.text();
         let inp = currentText.closest(".nam").find(".name-change");
+        let btn = $('.ready-btn');
+        btn.addClass('block-ready');
         inp.val(text);
         currentText.removeClass('block').addClass('none');
         inp.addClass('block').removeClass('none');
@@ -36,10 +38,10 @@ $(document).ready(function () {
     $('.ready-btn').click(function () {
         let s = $('.name-change').serialize();
         $.ajax({url:"", type:"post", data: s});
+        $(this).removeClass('block-ready');
     });
 
 });
-
 
 // 3.Добавить возможность перетаскивать товары мышкой, менять местами
 $( function() {

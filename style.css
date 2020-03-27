@@ -227,10 +227,7 @@ button:hover {
 
 .block {
     display: block;
-}
 
-.flex {
-    display: flex;
 }
 
 .ready {
@@ -245,10 +242,17 @@ button:hover {
     color: black;
     font-weight: bold;
     font-size: 18px;
-    visibility: hidden;
     display: none;
 }
-
+.block-ready {
+    display: block;
+    border: 1px solid black;
+    padding: 5px 25px;
+    background: white;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+}
 .row {
     list-style: none;
     text-align: center;
@@ -264,11 +268,13 @@ button:hover {
 
 .table .row {
     display: flex;
+    min-width: 600px;
 }
 
 .table .cat li {
     display: flex;
     width: 95%;
+    min-width: 600px;
     margin-bottom: 15px;
 }
 
