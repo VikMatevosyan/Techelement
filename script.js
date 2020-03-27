@@ -60,7 +60,6 @@ function correctBrackets(brs){
         '[': ']',
         '{': '}',
         '(': ')',
-        '<': '>',
     };
 
     let stack = [];
