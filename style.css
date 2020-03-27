@@ -3,12 +3,48 @@
     padding: 0;
 }
 
+body.dragging, body.dragging * {
+    cursor: move !important;
+}
+
+.dragged {
+    position: absolute;
+    opacity: 0.5;
+    z-index: 2000;
+}
+
+ul.cat li.placeholder {
+    position: relative;
+}
+
 a {
     text-decoration: none;
 }
 
+.menu-list {
+    display: flex;
+    justify-content: space-between;
+}
+
 .left {
     padding: 20px 93px;
+    width: 50%;
+    margin: 0;
+}
+
+.right {
+    width: 11%;
+    margin: 0;
+}
+
+.right-span {
+    padding: 50px;
+}
+
+.right-span:hover {
+    background: #dedede;
+    transition: all 0.5s;
+    cursor: pointer;
 }
 
 .catalog-name {
@@ -77,7 +113,7 @@ a {
 
 .catalog {
     margin-top: 25px;
-    width: 90%;
+    width: 100%;
 }
 
 .img {
@@ -97,7 +133,7 @@ a {
     width: 22%;
     border: 2px solid #dedede;
     background: #fff;
-    /*min-width: 250px;*/
+    min-width: 250px;
     display: block;
     overflow: hidden;
     margin: 0 0 30px 28px;
@@ -113,13 +149,22 @@ a {
     color: blue;
     font-size: 20px;
     width: 85%;
-    position: relative;
 }
 
 .desc {
     padding: 5px 0px;
     color: black;
     width: 83%;
+}
+
+.gen-number,
+.generator,
+.type,
+.power,
+.voltage,
+.start-type,
+.price-rub {
+    display: none;
 }
 
 .price {
@@ -159,6 +204,7 @@ button:hover {
     font-weight: bold;
     font-size: 18px;
     color: black;
+
 }
 
 .btn-cart {
@@ -171,8 +217,6 @@ button:hover {
 }
 
 .name-change {
-    position: absolute;
-    left: 0;
     padding: 5px 25px;
     display: none;
 }
@@ -183,6 +227,10 @@ button:hover {
 
 .block {
     display: block;
+}
+
+.flex {
+    display: flex;
 }
 
 .ready {
@@ -200,3 +248,125 @@ button:hover {
     visibility: hidden;
     display: none;
 }
+
+.row {
+    list-style: none;
+    text-align: center;
+    padding: 10px 0;
+    background: #dedede;
+    margin: 10px 30px;
+    display: none;
+}
+
+.model {
+    width: 25%;
+}
+
+.table .row {
+    display: flex;
+}
+
+.table .cat li {
+    display: flex;
+    width: 95%;
+    margin-bottom: 15px;
+}
+
+.table .img {
+    width: 6%;
+    border: 1px solid #dedede;
+    margin: 5px;
+}
+
+.table .nam {
+    width: 25%;
+}
+
+.table .gen-number {
+    color: gray;
+    padding: 8px;
+    font-size: 15px;
+    display: block;
+}
+
+.table .number {
+    display: none;
+}
+
+.table .generator {
+    font-size: 18px;
+    padding: 8px;
+    display: block;
+}
+
+.table .name {
+    display: none;
+}
+
+.table .type {
+    padding: 8px;
+    font-size: 17px;
+    width: 13%;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.table .power {
+    padding: 8px;
+    font-size: 17px;
+    width: 13%;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.table .desc {
+    display: none;
+}
+
+.table .voltage {
+    padding: 8px;
+    font-size: 17px;
+    width: 13%;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.table .start-type {
+    padding: 8px;
+    font-size: 17px;
+    width: 16%;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.table .price-rub {
+    padding: 8px;
+    font-size: 17px;
+    font-weight: bold;
+    margin: 0;
+    width: 8%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.table .price {
+    display: none;
+}
+
+.table .prices {
+    display: none;
+}
+
+.table .but {
+    display: none;
+}
+
